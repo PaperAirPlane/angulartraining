@@ -32,12 +32,15 @@ LAST UPDATE: 2015/01/05
         <!-- Plugins stylesheet : optional -->
         <link rel="stylesheet" href="../plugins/steps/css/jquery-steps.css">
         <link rel="stylesheet" href="../plugins/jquery-ui/css/jquery-ui.css">
+				<link rel="stylesheet" href="../plugins/selectize/css/selectize.css">
+        <link rel="stylesheet" href="../plugins/select2/css/select2.css">
         <!--/ Plugins stylesheet : optional -->
 
         <!-- Application stylesheet : mandatory -->
         <link rel="stylesheet" href="../stylesheet/bootstrap.css">
         <link rel="stylesheet" href="../stylesheet/layout.css">
         <link rel="stylesheet" href="../stylesheet/uielement.css">
+				<link rel="stylesheet" href="../stylesheet/custom.css">
         <!--/ Application stylesheet -->
 
         <!-- Theme stylesheet : optional -->
@@ -1247,104 +1250,39 @@ LAST UPDATE: 2015/01/05
                                 <!--/ Wizard Container 2 -->
                                 </div>
 
-                                <!-- Wizard Container 3 -->
-                                <div class="wizard-title">Content Details</div>
-                                <div class="wizard-container">
-                                    <div class="form-group">
-                                        <div class="col-md-12">
-                                            <h5 class="semibold text-primary nm">Proceed to payment</h5>
-                                            <p class="text-muted nm">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                            tempor incididunt ut labore et dolore magna aliqua.</p>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-2 control-label">Card number <span class="text-danger">*</span></label>
-                                        <div class="col-sm-5">
-                                            <input type="text" name="card-number" class="form-control" data-parsley-group="payment" data-parsley-required data-mask="9999-9999-9999-9999">
-                                        </div>
-                                        <div class="col-sm-5">
-                                            <input type="text" name="security-code" class="form-control" placeholder="Security code" data-parsley-group="payment" data-parsley-required data-parsley-maxlength="3" data-parsley-type="integer">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-2 control-label">Name on card <span class="text-danger">*</span></label>
-                                        <div class="col-sm-5">
-                                            <input type="text" name="card-holder" class="form-control" data-parsley-group="payment" data-parsley-required>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-2 control-label">Expiration <span class="text-danger">*</span></label>
-                                        <div class="col-sm-10">
-                                            <div class="row">
-                                                <div class="col-sm-4">
-                                                    <select name="month" class="form-control" data-parsley-group="payment" data-parsley-required>
-                                                        <option value="">Month</option>
-                                                        <option value="1">January</option>
-                                                        <option value="2">February</option>
-                                                        <option value="3">March</option>
-                                                        <option value="4">April</option>
-                                                        <option value="5">May</option>
-                                                        <option value="6">June</option>
-                                                        <option value="7">July</option>
-                                                        <option value="8">August</option>
-                                                        <option value="9">September</option>
-                                                        <option value="10">October</option>
-                                                        <option value="11">November</option>
-                                                        <option value="12">December</option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    <select name="year" class="form-control" data-parsley-group="payment" data-parsley-required>
-                                                        <option value="">Year</option>
-                                                        <option value="1">2014</option>
-                                                        <option value="2">2015</option>
-                                                        <option value="3">2016</option>
-                                                        <option value="4">2017</option>
-                                                        <option value="5">2018</option>
-                                                        <option value="6">2019</option>
-                                                        <option value="7">2020</option>sc
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--/ Wizard Container 3 -->
-
                                 <!-- Wizard Container 4 -->
                                 <div class="wizard-title">Campaign Settings</div>
                                 <div class="wizard-container">
                                     <div class="form-group">
                                         <div class="col-md-12">
-                                            <h5 class="semibold text-primary nm">Checkout</h5>
-                                            <p class="text-muted nm">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+																						<br>
+                                            <h5 class="semibold text-primary nm">Campaign Settings</h5>
+                                            <p class="text-muted nm">Adjust settings according to how you want to monitor and manage your campaign.<br> Automatic UTM code is recommended for most campaigns to easily keep them organized.</p>
                                         </div>
                                     </div>
+																		<hr>
                                     <div class="form-group">
-                                        <label class="col-sm-2 control-label">Term Of Services</label>
+																			<label class="col-sm-2 control-label">Campaign Metrics</label>
+																			<div class="col-sm-9">
+																					<select id="selectize-selectmultiple" class="form-control" placeholder="Select metrics to be measured..." multiple>
+																							<option value="">Select metrics to be measured...</option>
+																							<option value="Cost per impression">Cost per impression</option>
+																							<option value="Cost per click">Cost per click</option>
+																							<option value="Conversion">Conversion</option>
+																							<option value="Total cost">Total cost</option>
+																							<option value="Engagement">Engagement</option>
+																					</select>
+																			</div>
+																	</div>									
+                                    <div class="form-group">
+																				<label class="col-sm-2 control-label">Additional Options</label>
                                         <div class="col-md-10">
-                                            <span class="checkbox custom-checkbox">
-                                                <input type="checkbox" name="checkbox-tos" id="checkbox-tos">
-                                                <label for="checkbox-tos">&nbsp;&nbsp;I agree with this site <a href="javascript:void(0);">Term Of Services</a></label>
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-2 control-label">Notes</label>
-                                        <div class="col-md-10">
-                                            <textarea class="form-control" rows="5" placeholder="Add some notes!"></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="col-sm-12">
-                                            <div class="checkbox custom-checkbox">  
-                                                <input type="checkbox" name="checkbox1" id="checkbox1" value="1">  
-                                                <label for="checkbox1">&nbsp;&nbsp;Enable automatic UTM code creation.</label>   
+                                            <span class="checkbox custom-checkbox">  
+                                            	<input type="checkbox" name="checkbox-utm" id="checkbox-utm" value="1" data-toggle="collapse" data-target="#utmcode">
+																							<label for="checkbox-utm">&nbsp;&nbsp;Enable UTM code for each test to be generated automatically</label>
+																						</span>
+                                                
+																							<div id="utmcode" class="collapse"><div class="well"><code>www.example.com/?utm_source=facebook&utm_medium=cpc&utm_term={will change per test}&utm_content={will change per test}&utm_campaign=springscarfsale</code></div>
                                             </div>
                                             <div class="checkbox custom-checkbox pt10">  
                                                 <input type="checkbox" name="checkbox2" id="checkbox2" value="2">  
@@ -1384,11 +1322,15 @@ LAST UPDATE: 2015/01/05
 
         <!-- Plugins and page level script : optional -->
         <script type="text/javascript" src="../plugins/steps/js/jquery-steps.js"></script>
+				<script type="text/javascript" src="../plugins/selectize/js/selectize.js"></script>
         <script type="text/javascript" src="../plugins/parsley/js/parsley.js"></script>
         <script type="text/javascript" src="../plugins/inputmask/js/inputmask.js"></script>
         <script type="text/javascript" src="../javascript/backend/forms/wizard.js"></script>
         <script type="text/javascript" src="../plugins/jquery-ui/js/jquery-ui.js"></script>
+				<script type="text/javascript" src="../plugins/select2/js/select2.js"></script>
         <script type="text/javascript" src="../javascript/backend/components/sortable.js"></script>
+        <script type="text/javascript" src="../plugins/jquery-ui/js/jquery-ui-touch.js"></script>
+        <script type="text/javascript" src="../javascript/backend/forms/element.js"></script>
         <!--/ Plugins and page level script : optional -->
         <!--/ END JAVASCRIPT SECTION -->
     </body>
