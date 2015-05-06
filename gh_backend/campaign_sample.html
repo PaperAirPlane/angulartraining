@@ -30,21 +30,16 @@ LAST UPDATE: 2015/01/05
 
         <!-- START STYLESHEETS -->
         <!-- Plugins stylesheet : optional -->
-        <link rel="stylesheet" href="../plugins/steps/css/jquery-steps.css">
-        <link rel="stylesheet" href="../plugins/jquery-ui/css/jquery-ui.css">
-				<link rel="stylesheet" href="../plugins/selectize/css/selectize.css">
-        <link rel="stylesheet" href="../plugins/select2/css/select2.css">
         <!--/ Plugins stylesheet : optional -->
 
         <!-- Application stylesheet : mandatory -->
         <link rel="stylesheet" href="../stylesheet/bootstrap.css">
         <link rel="stylesheet" href="../stylesheet/layout.css">
         <link rel="stylesheet" href="../stylesheet/uielement.css">
-				<link rel="stylesheet" href="../stylesheet/custom.css">
         <!--/ Application stylesheet -->
 
         <!-- Theme stylesheet : optional -->
-        <link rel="stylesheet" href="../stylesheet/themes/theme1.css">
+				<link rel="stylesheet" href="../stylesheet/themes/theme1.css">
         <!--/ Theme stylesheet : optional -->
 
         <!-- modernizr script -->
@@ -407,7 +402,7 @@ LAST UPDATE: 2015/01/05
         </header>
         <!--/ END Template Header -->
 
-				<!-- START Template Sidebar (Left) -->
+        <!-- START Template Sidebar (Left) -->
         <aside class="sidebar sidebar-left sidebar-menu">
             <!-- START Sidebar Content -->
             <section class="content slimscroll">
@@ -611,8 +606,7 @@ LAST UPDATE: 2015/01/05
                     </li>
                 </ul>
                 <!--/ END Template Navigation/Menu -->
-
-
+							
                 <!-- START Sidebar summary -->
                 <!-- Summary -->
                 <h5 class="heading">Summary</h5>
@@ -1040,14 +1034,14 @@ LAST UPDATE: 2015/01/05
                 <!-- Page Header -->
                 <div class="page-header page-header-block">
                     <div class="page-header-section">
-                        <h4 class="title semibold">New Campaign</h4>
+                        <h4 class="title semibold">Sample Campaign #1</h4>
                     </div>
                     <div class="page-header-section">
                         <!-- Toolbar -->
                         <div class="toolbar">
                             <ol class="breadcrumb breadcrumb-transparent nm">
                                 <li><a href="javascript:void(0);">Campaign</a></li>
-                                <li class="active">New</li>
+                                <li class="active">Sample Campaign #1</li>
                             </ol>
                         </div>
                         <!--/ Toolbar -->
@@ -1055,262 +1049,81 @@ LAST UPDATE: 2015/01/05
                 </div>
                 <!-- Page Header -->
 
-                <!-- START row -->
-                <div class="row">
-                    <div class="col-md-12">
-                        <!-- START Panel -->
-                        <div class="panel panel-default">
-                            <!-- panel heading/header -->
-                            <div class="panel-heading">
-                                <h3 class="panel-title"><i class="ico-wrench"></i> Campaign Setup</h3>
-                            </div>
-                            <!--/ panel heading/header -->
-                            <!-- START Form Wizard -->         
-                            <form class="form-horizontal form-default" action="" id="wizard-validate">
-                                <!-- Wizard Container 1 -->
-                                <div class="wizard-title">Base Info</div>
-                                <div class="wizard-container">
-                                    <div class="form-group">
-                                        <div class="col-md-12">
-                                            <br>
-                                            <h5 class="semibold text-primary nm">Enter in general settings for your new campaign.</h5>
-                                            <p class="text-muted nm">The name, source and medium that you enter here will be used to automatically create the custom UTM codes specific to this campaign. <br><em>Tip: enter everything in lowercase and without space to help keep the UTM codes consistent.</em></p>
-                                        </div>
-                                    </div>
-                                    <hr>
-                                    <div class="form-group">
-                                        <label class="col-sm-2 control-label">Campaign Name: <span class="text-danger">*</span></label>
-                                        <div class="col-sm-5">
-                                            <input class="form-control" name="campaign-name" data-parsley-required placeholder="springscarfsale"></input>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-2 control-label">Source: </label>
-                                        <div class="col-sm-3">
-                                            <input class="form-control" name="campaign-source" placeholder="facebook, google, twitter "></input>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-2 control-label">Medium: </label>
-                                        <div class="col-sm-3">
-                                            <input class="form-control" name="campaign-medium" placeholder="cpc, socialmedia, email">
-                                            </input>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-2 control-label">Destination URL: <span class="text-danger">*</span></label>
-                                        <div class="col-sm-3">
-                                            <input class="form-control" name="campaign-source" placeholder="URL of your landing page">
-                                            </input>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-2 control-label">Integration: </label>
-                                        <div class="col-sm-3">
-                                            <select class="form-control" name="campaign-api">
-                                                <option value="xx">Select the data source</option>
-                                                <option value="xx">Facebook</option>
-                                                <option value="af">Adwords</option>
-                                                <option value="dz">LinkedIn</option>
-                                                <option value="ar">Twitter</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-2 control-label">Purpose:</label>
-                                        <div class="col-md-10">
-                                            <textarea class="form-control" rows="5" placeholder="What goals are you trying to reach for this campaign. It is helpful to write down the key results that you are testing for. Example: finding which type of ad along with which image and headline has highest click-through-rate on LinkedIn."></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--/ Wizard Container 1 -->
-
-                                <!-- Wizard Container 2 -->
-                                <div class="wizard-title">Scope Levels</div>
-                                <div class="wizard-container">
-                                    <div class="form-group">
-                                        <div class="col-md-12">
-                                            <br>
-                                            <h5 class="semibold text-primary nm">Conduct testing from big to small changes.</h5>
-                                            <p class="text-muted nm">The most effective way of getting results from your split testings is to go from big (macro) to small (micro) changes. You conduct split testing for big changes to find the right direction and then pinpoint the exact optimal version with micro changes. In other words test big changes to find the global maxima and then test micro changes to pinpoint the local maxima.</p>
-                                        </div>
-                                    </div>
-                                    <hr>
-                                    <div class="form-group">
-                                        <div class="col-sm-4">
-                                            <div class="note note-primary mb15"><span class="ico-binoculars"></span> Global Maxima</div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="col-md-12">
-                                            <!-- START sortable list -->
-                                            <ul class="list-unstyled sortable-list">
-                                                <li class="panel mb5">
-                                                    <div class="panel-heading nm bdr0 handle">
-                                                        <h3 class="panel-title"><i class="ico-binoculars mr5"></i> Top Scope</h3>
-                                                    </div>
-                                                    <div class="panel-body">
-                                                        <div class="form-group">
-                                                            <label class="col-sm-2 control-label">Testing For:</label>
-                                                            <div class="col-md-8">
-                                                                <input class="form-control" placeholder="Best ad type to display">
-                                                                </input>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li class="panel mb5">
-                                                    <div class="panel-heading nm bdr0 handle">
-                                                        <h3 class="panel-title"><i class="ico-binoculars mr5"></i> 2nd Scope</h3>
-                                                    </div>
-                                                    <div class="panel-body">
-                                                        <div class="form-group">
-                                                            <label class="col-sm-2 control-label">Testing For:</label>
-                                                            <div class="col-md-8">
-                                                                <input class="form-control" placeholder="Best image to use">
-                                                                </input>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li class="panel mb5">
-                                                    <div class="panel-heading nm bdr0 handle">
-                                                        <h3 class="panel-title"><i class="ico-binoculars mr5"></i> 3nd Scope</h3>
-                                                    </div>
-                                                    <div class="panel-body">
-                                                        <div class="form-group">
-                                                            <label class="col-sm-2 control-label">Testing For:</label>
-                                                            <div class="col-md-8">
-                                                                <input class="form-control" placeholder="Which type of headline: question or statement">
-                                                                </input>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <!--/ END sortable list -->
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="col-sm-4">
-                                            <div class="note note-primary mb15"><span class="ico-search3"></span> Local Maxima</div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="col-md-12">
-                                            <!-- START sortable list -->
-                                            <ul class="list-unstyled sortable-list">
-                                                <li class="panel mb5">
-                                                    <div class="panel-heading nm bdr0 handle">
-                                                        <h3 class="panel-title"><i class="ico-search3 mr5"></i> Top Scope</h3>
-                                                    </div>
-                                                    <div class="panel-body">
-                                                        <div class="form-group">
-                                                            <label class="col-sm-2 control-label">Testing For:</label>
-                                                            <div class="col-md-8">
-                                                                <input class="form-control" placeholder="Optimizing CTA word/phrase">
-                                                                </input>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li class="panel mb5">
-                                                    <div class="panel-heading nm bdr0 handle">
-                                                        <h3 class="panel-title"><i class="ico-search3"></i> 2nd Scope</h3>
-                                                    </div>
-                                                    <div class="panel-body">
-                                                        <div class="form-group">
-                                                            <label class="col-sm-2 control-label">Testing For:</label>
-                                                            <div class="col-md-8">
-                                                                <input class="form-control" placeholder="Testing for best noun to use within the headline">
-                                                                </input>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li class="panel mb5">
-                                                    <div class="panel-heading nm bdr0 handle">
-                                                        <h3 class="panel-title"><i class="ico-search3 mr5"></i> 3rd Scope</h3>
-                                                    </div>
-                                                    <div class="panel-body">
-                                                        <div class="form-group">
-                                                            <label class="col-sm-2 control-label">Testing For:</label>
-                                                            <div class="col-md-8">
-                                                                <input class="form-control" placeholder="Testing for best adjective to use within the headline">
-                                                                </input>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <!--/ END sortable list -->
-                                    </div>
-                                    
-                                <!--/ Wizard Container 2 -->
-                                </div>
-
-                                <!-- Wizard Container 4 -->
-                                <div class="wizard-title">Campaign Settings</div>
-                                <div class="wizard-container">
-                                    <div class="form-group">
-                                        <div class="col-md-12">
-																						<br>
-                                            <h5 class="semibold text-primary nm">Campaign Settings</h5>
-                                            <p class="text-muted nm">Adjust settings according to how you want to monitor and manage your campaign.<br> Automatic UTM code is recommended for most campaigns to easily keep them organized.</p>
-                                        </div>
-                                    </div>
-																		<hr>
-                                    <div class="form-group">
-																			<label class="col-sm-2 control-label">Campaign Metrics</label>
-																			<div class="col-sm-9">
-																					<select id="selectize-selectmultiple" class="form-control" placeholder="Select metrics to be measured..." multiple>
-																							<option value="">Select metrics to be measured...</option>
-																							<option value="Cost per impression">Cost per impression</option>
-																							<option value="Cost per click">Cost per click</option>
-																							<option value="Conversion">Conversion</option>
-																							<option value="Total cost">Total cost</option>
-																							<option value="Engagement">Engagement</option>
-																					</select>
-																			</div>
-																	</div>									
-                                    <div class="form-group">
-																				<label class="col-sm-2 control-label">Additional Options</label>
-                                        <div class="col-md-10">
-                                            <span class="checkbox custom-checkbox">  
-                                            	<input type="checkbox" name="checkbox-utm" id="checkbox-utm" value="1" data-toggle="collapse" data-target="#utmcode">
-																							<label for="checkbox-utm">&nbsp;&nbsp;Enable UTM code for each test to be generated automatically</label>
-																						</span>
-                                                
-																							<div id="utmcode" class="collapse"><div class="well"><code>www.example.com/?utm_source=facebook&utm_medium=cpc&utm_term={will change per test}&utm_content={will change per test}&utm_campaign=springscarfsale</code></div>
-                                            </div>
-                                            <div class="checkbox custom-checkbox pt10">  
-                                                <input type="checkbox" name="checkbox2" id="checkbox2" value="2">  
-                                                <label for="checkbox2">&nbsp;&nbsp;Enable milestone email notifications.</label>   
-                                            </div>
-                                            <div class="checkbox custom-checkbox pt10">  
-                                                <input type="checkbox" name="checkbox3" id="checkbox3" value="3">  
-                                                <label for="checkbox3">&nbsp;&nbsp;Pin this campaign under the summary on sidebar.</label>   
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Wizard Container 4 -->
-                            </form>
-                            <!--/ END Form Wizard --> 
-                        </div>
-                        <!--/ END Panel -->
-                    </div>
-                </div>
-                <!--/ END row -->
-                <hr><!-- Horizontal rule -->
-            </div>
-            <!--/ END Template Container -->
-
-            <!-- START To Top Scroller -->
-            <a href="#" class="totop animation" data-toggle="waypoints totop" data-showanim="bounceIn" data-hideanim="bounceOut" data-offset="50%"><i class="ico-angle-up"></i></a>
-            <!--/ END To Top Scroller -->
-        </section>
+					<div class="col-md-12">
+							<!-- section header -->
+							<div class="section-header mb15">
+									<h5 class="semibold"><span class="ico-binoculars mr5"></span> Global Maxima</h5>
+							</div>
+							<!--/ section header -->
+							<!-- tab -->
+							<ul class="nav nav-tabs">
+									<li class="active"><a href="#tabone1" data-toggle="tab">Top Scope</a></li>
+									<li class=><a href="#tabtwo1" data-toggle="tab">2nd Scope</a></li>
+									<li class=><a href="#tabthree1" data-toggle="tab">3rd Scope</a></li>
+									<li class="dropdown">
+											<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">Edit <b class="caret"></b></a>
+											<ul class="dropdown-menu">
+													<li><a href="#tabfour1" data-toggle="tab">Notifications</a></li>
+													<li><a href="#tabfive1" data-toggle="tab">UTM Parameters</a></li>
+													<li><a href="#tabsix1" data-toggle="tab">Report Metrics</a></li>
+											</ul>
+									</li>
+							</ul>
+							<!--/ tab -->
+							<!-- tab content -->
+							<div class="tab-content panel">
+									<div class="tab-pane active" id="tabone1">
+											<h4 class="text-primary mt0">Safari and responsive justified navs</h4>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+									</div>
+									<div class="tab-pane" id="tabtwo1">
+											<h4 class="text-primary mt0">jQuery required</h4>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+									</div>
+									<div class="tab-pane" id="tabthree1">
+											<h4 class="text-primary mt0">Nested headings</h4>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+									</div>
+							</div>
+							<!--/ tab content -->
+							<hr>
+							<!-- section header -->
+							<div class="section-header mb15">
+									<h5 class="semibold"><span class="ico-search3 mr5"></span> Local Maxima</h5>
+							</div>
+							<!--/ section header -->
+							<!-- tab -->
+							<ul class="nav nav-tabs">
+									<li class="active"><a href="#tabone1" data-toggle="tab">Top Scope</a></li>
+									<li class=><a href="#tabtwo1" data-toggle="tab">2nd Scope</a></li>
+									<li class=><a href="#tabthree1" data-toggle="tab">3rd Scope</a></li>
+									<li class="dropdown">
+											<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">Edit <b class="caret"></b></a>
+											<ul class="dropdown-menu">
+													<li><a href="#tabfour1" data-toggle="tab">Notifications</a></li>
+													<li><a href="#tabfive1" data-toggle="tab">UTM Parameters</a></li>
+													<li><a href="#tabsix1" data-toggle="tab">Report Metrics</a></li>
+											</ul>
+									</li>
+							</ul>
+							<!--/ tab -->
+							<!-- tab content -->
+							<div class="tab-content panel">
+									<div class="tab-pane active" id="tabone1">
+											<h4 class="text-primary mt0">Safari and responsive justified navs</h4>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+									</div>
+									<div class="tab-pane" id="tabtwo1">
+											<h4 class="text-primary mt0">jQuery required</h4>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+									</div>
+									<div class="tab-pane" id="tabthree1">
+											<h4 class="text-primary mt0">Nested headings</h4>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+									</div>
+							</div>
+							<!--/ tab content -->
+					</div>
         <!--/ END Template Main -->
 
         <!-- START JAVASCRIPT SECTION (Load javascripts at bottom to reduce load time) -->
@@ -1321,16 +1134,6 @@ LAST UPDATE: 2015/01/05
         <!--/ Application and vendor script : mandatory -->
 
         <!-- Plugins and page level script : optional -->
-        <script type="text/javascript" src="../plugins/steps/js/jquery-steps.js"></script>
-				<script type="text/javascript" src="../plugins/selectize/js/selectize.js"></script>
-        <script type="text/javascript" src="../plugins/parsley/js/parsley.js"></script>
-        <script type="text/javascript" src="../plugins/inputmask/js/inputmask.js"></script>
-        <script type="text/javascript" src="../javascript/backend/forms/wizard.js"></script>
-        <script type="text/javascript" src="../plugins/jquery-ui/js/jquery-ui.js"></script>
-				<script type="text/javascript" src="../plugins/select2/js/select2.js"></script>
-        <script type="text/javascript" src="../javascript/backend/components/sortable.js"></script>
-        <script type="text/javascript" src="../plugins/jquery-ui/js/jquery-ui-touch.js"></script>
-        <script type="text/javascript" src="../javascript/backend/forms/element.js"></script>
         <!--/ Plugins and page level script : optional -->
         <!--/ END JAVASCRIPT SECTION -->
     </body>
