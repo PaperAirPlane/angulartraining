@@ -36,6 +36,7 @@ LAST UPDATE: 2015/01/05
         <link rel="stylesheet" href="../stylesheet/bootstrap.css">
         <link rel="stylesheet" href="../stylesheet/layout.css">
         <link rel="stylesheet" href="../stylesheet/uielement.css">
+				<link rel="stylesheet" href="../plugins/fileupload/css/fileupload.css">
         <!--/ Application stylesheet -->
 
         <!-- Theme stylesheet : optional -->
@@ -1066,16 +1067,76 @@ LAST UPDATE: 2015/01/05
 													<li><a href="#tabfour1" data-toggle="tab">Notifications</a></li>
 													<li><a href="#tabfive1" data-toggle="tab">UTM Parameters</a></li>
 													<li><a href="#tabsix1" data-toggle="tab">Report Metrics</a></li>
+													<li><a href="#tabsix1" data-toggle="tab">Campaign Platform</a></li>
 											</ul>
 									</li>
 							</ul>
 							<!--/ tab -->
 							<!-- tab content -->
 							<div class="tab-content panel">
-									<div class="tab-pane active" id="tabone1">
-											<h4 class="text-primary mt0">Safari and responsive justified navs</h4>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+								<div class="tab-pane active" id="tabone1">
+								<!-- Form for Top Scope -->
+									<div class="form-group"> 
+										<div class="row">
+												<div class="col-sm-4">
+														<label class="control-label">Facebook Ad Type <span class="text-danger">*</span></label>
+														<select name="global-fb-ad-type-top-scope" class="form-control">
+															<option class="selected">Choose Button</option>
+															<option>Send people to your website</option>
+															<option>Increase conversions on your website</option>
+															<option>Boost your posts</option>
+															<option>Promote your Page</option>
+															<option>Get installs of your app</option>
+															<option>Increase engagement in your app</option>
+															<option>Reach people near your business</option>
+															<option>Raise attendance at your event</option>
+															<option>Get people to claim your offer</option>
+															<option>Get video views</option>
+														</select> 
+												</div>
+										</div>
 									</div>
+									<div class="form-group">
+										<div class="row">
+												<div class="col-sm-3">
+														<label class="control-label">CTA Button <span class="text-danger">*</span></label>
+														<select name="global-cta-top-scope" class="form-control">
+															<option class="selected">Choose Button</option>
+															<option>Shop Now</option>
+															<option>Book Now</option>
+															<option>Learn More</option>
+															<option>Sign Up</option>
+															<option>Download</option>
+														</select> 
+												</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="row">
+												<div class="col-sm-6">
+														<label class="control-label">Headline <span class="text-danger">*</span></label>
+														<input name="global-headline-top-scope" class="form-control" maxlength="25"></input>
+												</div>
+										</div>
+									</div>
+									<div class="form-group">
+											<div class="row">
+													<div class="col-sm-10">
+															<label class="control-label">Text <span class="text-danger">*</span></label>
+															<textarea name="global-text-top-scope" class="form-control" maxlength="90"></textarea>
+													</div>
+											</div>
+									</div>
+									<div class="form-group">
+											<div class="row">
+													<div class="col-sm-10">
+															<label class="control-label">News Feed Link Description</label>
+															<textarea rows="4" name="global-new-feed-link-top-scope" class="form-control" maxlength="200"></textarea>
+													</div>
+											</div>
+									</div>
+								</div>
+									<!--/ Form for Top Scope -->
 									<div class="tab-pane" id="tabtwo1">
 											<h4 class="text-primary mt0">jQuery required</h4>
 											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -1134,6 +1195,21 @@ LAST UPDATE: 2015/01/05
         <!--/ Application and vendor script : mandatory -->
 
         <!-- Plugins and page level script : optional -->
+				<script type="text/javascript" src="../plugins/fileupload/js/vendor/jquery.ui.widget.js"></script>
+        <script type="text/javascript" src="../plugins/fileupload/js/vendor/load-image.js"></script>
+        <script type="text/javascript" src="../plugins/fileupload/js/vendor/load-image-meta.js"></script>
+        <script type="text/javascript" src="../plugins/fileupload/js/vendor/load-image-exif.js"></script>
+        <script type="text/javascript" src="../plugins/fileupload/js/vendor/load-image-ios.js"></script>
+        <script type="text/javascript" src="../plugins/fileupload/js/vendor/canvas-to-blob.js"></script>
+        <script type="text/javascript" src="../plugins/fileupload/js/vendor/jquery.iframe-transport.js"></script>
+        <script type="text/javascript" src="../plugins/fileupload/js/jquery.fileupload.js"></script>
+        <script type="text/javascript" src="../plugins/fileupload/js/jquery.fileupload-process.js"></script>
+        <script type="text/javascript" src="../plugins/fileupload/js/jquery.fileupload-image.js"></script>
+        <script type="text/javascript" src="../plugins/fileupload/js/jquery.fileupload-audio.js"></script>
+        <script type="text/javascript" src="../plugins/fileupload/js/jquery.fileupload-video.js"></script>
+        <script type="text/javascript" src="../plugins/fileupload/js/jquery.fileupload-validate.js"></script>
+        <script type="text/javascript" src="../plugins/fileupload/js/jquery.fileupload-ui.js"></script>
+        <script type="text/javascript" src="../javascript/backend/forms/fileupload.js"></script>
         <!--/ Plugins and page level script : optional -->
         <!--/ END JAVASCRIPT SECTION -->
     </body>
