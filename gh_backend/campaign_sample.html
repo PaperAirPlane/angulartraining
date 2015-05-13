@@ -31,6 +31,7 @@ LAST UPDATE: 2015/01/05
         <!-- START STYLESHEETS -->
         <!-- Plugins stylesheet : optional -->
 				<link rel="stylesheet" href="../plugins/selectize/css/selectize.css">
+				<link rel="stylesheet" href="../stylesheet/custom.css">
         <!--/ Plugins stylesheet : optional -->
 
         <!-- Application stylesheet : mandatory -->
@@ -1057,7 +1058,7 @@ LAST UPDATE: 2015/01/05
                     <div class="col-lg-3">
                         <!-- tab menu -->
                         <ul class="list-group list-group-tabs">
-                            <li class="list-group-item active"><a href="#profile" data-toggle="tab"><i class="ico-contract mr5"></i> Global Maxima</a></li>
+                            <li class="list-group-item active"><a href="#globalScope" data-toggle="tab"><i class="ico-contract mr5"></i> Global Maxima</a></li>
                             <li class="list-group-item"><a href="#account" data-toggle="tab"><i class="ico-search3 mr5"></i> Local Maxima</a></li>
                             <li class="list-group-item"><a href="#security" data-toggle="tab"><i class="ico-notification mr5"></i> Notifcations</a></li>
                             <li class="list-group-item"><a href="#password" data-toggle="tab"><i class="ico-link3 mr5"></i> UTM Parameters</a></li>
@@ -1073,7 +1074,7 @@ LAST UPDATE: 2015/01/05
                         <!-- START Tab-content -->
                         <div class="tab-content">
                             <!-- tab-pane: profile -->
-                            <div class="tab-pane active" id="profile">
+                            <div class="tab-pane active" id="globalScope">
                                 <!-- form profile -->
                                 	<ul class="nav nav-tabs">
 																		<li class="active"><a href="#tabone1" data-toggle="tab">Top Scope</a></li>
@@ -1098,37 +1099,34 @@ LAST UPDATE: 2015/01/05
 																					<div class="row">
 																						<div class="col-sm-9">
 																							<label class="control-label">Set equal to: </label>
-																							 <select class="presetcontent" id="selectize-customselect">
-																								<optgroup label="Top Scope">
-																									<option value="TopA">Version A</option>
-																									<option value="TopB">Version B</option>
-																								</optgroup>
-                                                <optgroup label="2nd Scope">
-																									<option value="2ndA">Version A</option>
-																									<option value="2ndB">Version B</option>
-																								</optgroup>
-																								<optgroup label="3rd Scope">
-																									<option value="3rdA">Version A</option>
-																									<option value="3rdB">Version B</option>
-																								</optgroup>
-                                            </select>
+																								<select class="presetcontent" id="selectize-customselect">
+																									<optgroup label="Top Scope">
+																										<option value="TopA">Version A</option>
+																										<option value="TopB">Version B</option>
+																									</optgroup>
+																									<optgroup label="2nd Scope">
+																										<option value="2ndA">Version A</option>
+																										<option value="2ndB">Version B</option>
+																									</optgroup>
+																									<optgroup label="3rd Scope">
+																										<option value="3rdA">Version A</option>
+																										<option value="3rdB">Version B</option>
+																									</optgroup>
+																								</select>
+																						</div>
+																						<div class="text-right">
+																							<div class="btn-group">
+																								<button type="button" class="btn btn-sm btn-primary dropdown-toggle spacer-right" data-toggle="dropdown">Version View <span class="caret"></span></button>
+																								<ul class="dropdown-menu pull-right">
+																										<li><a href="#">Version A</a></li>
+																										<li><a href="#">Version B</a></li>
+																										<li class="divider"></li>
+																										<li><a href="#" class="text-danger">Delete</a></li>
+																								</ul>
+																							</div>
 																						</div>
 																					</div>
 																				</div>
-																				<div class="form-group">
-																						<div class="row">
-																							<label class="col-sm-4 control-label">Radio Button</label>
-																							<div class="col-sm-9">
-																									<label class="radio-inline">
-																											<input type="radio" value="versionA" name="abVersion">Version A
-																									</label>
-																									<label class="radio-inline">
-																											<input type="radio" value="versionB"  name="abVersion">Version B
-																									</label>
-																							</div>
-																						</div>
-																				</div>
-
 																				<div class="form-group"> 
 																					<div class="row">
 																							<div class="col-sm-4">
