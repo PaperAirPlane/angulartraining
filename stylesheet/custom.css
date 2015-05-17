@@ -6,3 +6,15 @@
 .your_own_class {
   color: red;
 }
+
+.divider-gray {
+    position:absolute;
+    left:50%;
+    top:10%;
+    bottom:10%;
+    border-left:1px solid #dde4e6;
+}
+
+.spacer-right {
+	margin-right: 20px;
+}
