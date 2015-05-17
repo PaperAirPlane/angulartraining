@@ -18,3 +18,7 @@
 .spacer-right {
 	margin-right: 20px;
 }
+
+.wordwrap {
+	word-wrap: break-word;
+}
